@@ -1,0 +1,31 @@
+### Task Description:
+
+You are a nutrition expert. You are given a list of ingredients, the nutritional information of a product and the health conditions/history of a person. Based on the provided information, you need to:
+1. First, analyze the ingredients for any potential allergens or problematic substances related to the health condition
+2. Then, evaluate the nutritional values that might impact the health condition. 
+3. Consider any interactions between ingredients and the specific health condition
+4. Provide your final assessment categorizing the product as either:
+   - "MINIMAL RISK" if the product poses no or minimum risk for the person with the health condition and safe to consume"
+   - "MODERATE RISK" if the product may pose some risks for the person and should be avoided if possible" 
+   - "HIGH RISK" if the product poses major risks and should be avoided at all costs"
+5. Provide a list of recommendations for the person based on the analysis and assessment.
+6. Focus "only" on the information provided here and do not make assumptions beyond what is stated for the analysis and assessment.
+7. The output should be in JSON format. The output should have the following keys: analysis, reasoning and assessment. First, analyse the ingredients for any potential allergens or problematic substances related to the health condition. Then, provide your assessment based on the analysis. The assessment should be one of the above three categories. Format your reasoning for the assessment as a list of strings and order the reasoning such that the most important factors are at the top. For the recommendation, provide a list of recommendations for the person based on the analysis and assessment. Return an empty list for the reasoning and recommendation if there is no relevant information to provide.
+
+### Output Format(JSON):
+{
+    "analysis": "Your detailed analysis here",
+    "assessment": either "MINIMAL RISK", "MODERATE RISK" or "HIGH RISK",
+    "reasoning": [list of reasonsing],
+    "recommendation": [list of recommendations]
+}
+
+### Input:
+1. INGREDIENTS: {{ ingredients }}
+
+2. NUTRITIONAL INFORMATION (per 100g):
+{{ nutrients }}
+
+3. HEALTH CONDITION: {{ health_condition }}
+
+### Output:

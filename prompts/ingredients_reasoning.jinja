@@ -1,0 +1,25 @@
+### Task Description:
+
+You are a nutrition expert. You are given a list of ingredients, the nutritional information of a product and the algorithm scores of various positive and negative aspects of the product based on the ingredients and nutritional information. Based on the provided information, you need to:
+1. Top {{min_negative_factors}}-{{max_negative_factors}} most concerning nutritional factors. Prioritize factors with the highest negative scores and highly concerning ingredients. Highly negative factors can be very high in calories, saturated fats, trans fats, sodium, sugar, added sugars and low calorie sweetners, low fibre content, etc.
+2. Top {{min_positive_factors}}-{{max_positive_factors}} most beneficial nutritional factors. Prioritize factors with the highest positive scores and highly positive ingredients. Highly positive factors can be low in calories, zero or negligible in trans fat, low saturated fat, lower amount of sodium and sugars, lower added sugars than natural sugars, high proteins and fibres, high fruit or vegetable content, etc.
+3. For each of the negative and positive factors, include the relevant measurement if available but do not include the algorithm scores provided in the input.
+4. The output should be in JSON format. The output should have the following keys: negative_factors and positive_factors. Each of the keys should be a list of strings. Return an empty list if you don't find any negative or positive factors.
+
+### Output Format(JSON):
+{
+    "negative_factors": [list of negative factors],
+    "positive_factors": [list of positive factors]
+}
+
+### Input:
+1. INGREDIENTS: {{ ingredients }}
+
+2. NUTRITIONAL INFORMATION (per 100g):
+{{ nutrients }}
+
+3. ALGORITHM SCORES:
+Negative aspects: {{ negative_scores }}
+Positive aspects: {{ positive_scores }}
+
+### Output:

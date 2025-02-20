@@ -1,0 +1,27 @@
+### Task Description:
+You are given a list of ingredients. Your task is following:
+1. Parse the ingredients list into a list of ingredients.
+2. From the list of ingredients, determine the ingredients that are natural sugar ingredients. Some examples of natural sugars ingredients are: milk, tomato paste, apple juice concentrate, raisins, grape juice concentrate, dates, etc.
+3. From the list of ingredients, determine the ingredients that are added sugars. Some examples of added sugars are: sugars, high fructose corn syrup, corn syrup, cane sugar, cane juice, molasses, honey, maple syrup, dextrose, etc.
+4. From the list of ingredients, determine the ingredients that are low-calorie sweetners. Some examples of low calorie sweetners are: sucralose, acesulphame potassium, aspartame, sorbitol, maltitol, stevia extract.
+5. From the list of ingredients, determine the ingredients that are made from fruit, vegetables, nuts, seeds, herbs, spices, etc. Some examples of fruit or vegetable are: apple, banana, orange, carrot, tomato, spinach, etc.
+6. The ingredients should be returned in a list of dictionaries. Each dictionary should have the following keys: name, natural_sugar, added_sugar, low_calorie_sweetner, fruit_vegetable_nut_herb_spices.
+7. The ingredients returned should be in the same order as the ingredients list.
+
+### Output Format(JSON):
+{
+    "ingredients": [
+        {
+            "name": "ingredient_name",
+            "natural_sugar": "yes" or "no",
+            "added_sugar": "yes" or "no",
+            "low_calorie_sweetner": "yes" or "no",
+            "fruit_vegetable_nut_herb_spices": "yes" or "no"
+        }
+    ]
+}
+
+### Input:
+{{ ingredients }}
+
+### Output:
